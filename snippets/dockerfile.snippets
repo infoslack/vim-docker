@@ -1,0 +1,29 @@
+snippet f
+	FROM ${1:image}
+snippet r
+	RUN ${1:command}
+snippet cp
+	COPY ${1:src} ${2:dest}
+snippet a
+	ADD ${1:src} ${2:dest}
+snippet e
+	ENV ${1:key} ${2:value}
+snippet exp
+	EXPOSE ${1:port}
+snippet c
+	CMD ${1:command}
+snippet ent
+	ENTRYPOINT ${1:command}
+snippet v
+	VOLUME ["${1:path}"]
+snippet u
+	USER ${1:name}
+snippet w
+	WORKDIR ${1:path}
+snippet o
+	ONBUILD ${1:instruction}
+snippet l
+	LABEL ${1:label}="${2:value}"
+snippet hea
+	HEALTHCHECK --interval=${1:time}m --timeout=${2:time}s \
+		CMD ${3:instruction}
